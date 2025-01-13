@@ -13,6 +13,10 @@ struct ContentView: View {
     @State var base: Int = 1
     
     // MARK: Computed properties
+    var squared: Int {
+        return  base * base
+    }
+    
     var body: some View {
         VStack {
             
@@ -20,7 +24,7 @@ struct ContentView: View {
             
             HStack(alignment: .top) {
  
-                Text("\(base)")
+                Text("(\(base))")
                     .font(.system(size: 96))
  
                 Text("2")
@@ -29,9 +33,11 @@ struct ContentView: View {
                 Text("=")
                     .font(.system(size: 96))
  
-                Text("25")
+                Text("\(squared)")
                     .font(.system(size: 96))
             }
+            .lineLimit(1)
+            .minimumScaleFactor(0.5)
             Stepper(value: $base, label: {
                 Text("Base")
             })

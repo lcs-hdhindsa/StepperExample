@@ -12,6 +12,8 @@ struct AdditionView: View {
     // MARK: Stored properties
     @State var firstNumber: Int = 5
     
+    @State var secondNumber: Int = 3
+    
     // MARK: Computed properties
     var sum: Int {
         return firstNumber + firstNumber
@@ -22,6 +24,7 @@ struct AdditionView: View {
             
             Spacer()
             
+            // Shows first number
             HStack {
                 
                 Spacer()
@@ -29,8 +32,22 @@ struct AdditionView: View {
                 Text("\(firstNumber)")
             }
             
+            // To change first number
             Stepper(value: $firstNumber, label: {
                 Text("select first number")
+            })
+            
+            // Shows second number
+            HStack {
+                
+                Spacer()
+                
+                Text("\(secondNumber)")
+            }
+            
+            // To change second number
+            Stepper(value: $secondNumber, label: {
+                Text("select second number")
             })
             
             Spacer()

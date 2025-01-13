@@ -16,7 +16,7 @@ struct AdditionView: View {
     
     // MARK: Computed properties
     var sum: Int {
-        return firstNumber + firstNumber
+        return firstNumber + secondNumber
     }
     
     var body: some View {
@@ -49,6 +49,14 @@ struct AdditionView: View {
             Stepper(value: $secondNumber, label: {
                 Text("select second number")
             })
+            
+            // Show the sum
+            HStack {
+                
+                Spacer()
+                
+                Text("\(sum)")
+            }
             
             Spacer()
         }

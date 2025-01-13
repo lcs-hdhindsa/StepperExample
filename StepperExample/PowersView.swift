@@ -7,7 +7,7 @@
  
 import SwiftUI
  
-struct ContentView: View {
+struct PowersView: View {
     
     // MARK: Stored properties
     @State var base: Int = 1
@@ -47,8 +47,8 @@ struct ContentView: View {
         .padding()
     }
 }
- 
+
 #Preview {
-    ContentView()
+    PowersView()
 }
  
